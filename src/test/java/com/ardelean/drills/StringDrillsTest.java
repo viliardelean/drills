@@ -1,10 +1,10 @@
 package com.ardelean.drills;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
-
-import junit.framework.TestCase;
 
 public class StringDrillsTest {
 
@@ -36,21 +36,24 @@ public class StringDrillsTest {
 	// returns the last 3 characters as a string with substring
 	@Test
 	public void lastThreeDigits() {
-		assertEquals("rel", testedClass.reverseWithFor("dorel"));
+		assertEquals("rel", testedClass.lastThreeDigits("dorel"));
+		assertEquals("el", testedClass.lastThreeDigits("el"));
 	}
 	
 	// if string has odd length, replace middle character with "-" 
 	@Test
 	public void replaceMiddleWithMinus() {
-		assertEquals("do-el", testedClass.reverseWithFor("dorel"));
-		assertEquals("family", testedClass.reverseWithFor("family"));
+		assertEquals("do-el", testedClass.replaceMiddleWithMinus("dorel"));
+		assertEquals("family", testedClass.replaceMiddleWithMinus("family"));
 	}
 	
 	// given a String, check if it is a inmatriculation format. returns boolean
 	//format AA11AAA
 	@Test
 	public void checkIfInmatriculation() {
-		assertEquals("lerod", testedClass.reverseWithFor("dorel"));
+		assertTrue(testedClass.checkIfInmatriculation("AR28TOE"));
+		assertFalse(testedClass.checkIfInmatriculation("A328TOE"));
+		assertFalse(testedClass.checkIfInmatriculation("AR328"));
 		//assertTrue
 		//assertEquals("", testedClass.reverseWithFor(null));
 	}

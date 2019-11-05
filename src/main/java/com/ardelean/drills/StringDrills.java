@@ -35,32 +35,35 @@ public class StringDrills {
 		if (null == string || string.length() == 0) {
 			return string;
 		}
-		return reverseRecursively(string.substring(1)) + string.charAt(0);
+		return reverseRecursively(string.substring(1)) + string.charAt(0);  
+		
 	}
 
 	public String lastThreeDigits(String mystr) {
+		if (mystr.length()<=3) {
+			return mystr;
+		}
 		String result = mystr.substring(mystr.length() - 3);
 		return result;
 	}
 
 	public String replaceMiddleWithMinus(String mystr) {
 		if (mystr.length() % 2 == 1) {
-			String firstString = "";
-			String middleString = "-";
-			String lastString = "";
-			firstString = mystr.substring(0, (mystr.length() / 2));
-			lastString = mystr.substring((mystr.length() / 2) + 1, mystr.length());
-			mystr = firstString + middleString + lastString;
-			return mystr;
+			String firstPart = mystr.substring(0, (mystr.length() / 2));
+			String lastPart = mystr.substring((mystr.length() / 2) + 1, mystr.length());
+			return firstPart + "-" + lastPart;
 		}
 		return mystr;
 	}
 
-	public boolean checkIfInmatriculation(String inmatriculation) {
-		if (inmatriculation.length() != 7) {
+	public boolean checkIfInmatriculation(String placa) {
+		if (placa.length() != 7) {
 			return false;
 		}
-		
+		if (!Character.isLetter(placa.charAt(0))
+				|| !Character.isLetter(placa.charAt(1))) {
+			return false;
+		}
 
 		return true;
 	}
