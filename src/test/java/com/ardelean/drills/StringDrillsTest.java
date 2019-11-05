@@ -30,21 +30,20 @@ public class StringDrillsTest {
 	@Test
 	public void reverseRecursively() {
 		assertEquals("lerod", testedClass.reverseWithFor("dorel"));
-		//assertEquals("", testedClass.reverseWithFor(null));
+		assertEquals("", testedClass.reverseWithFor(null));
 	}
 	
 	// returns the last 3 characters as a string with substring
 	@Test
 	public void lastThreeDigits() {
-		assertEquals("lerod", testedClass.reverseWithFor("dorel"));
-		//assertEquals("", testedClass.reverseWithFor(null));
+		assertEquals("rel", testedClass.reverseWithFor("dorel"));
 	}
 	
 	// if string has odd length, replace middle character with "-" 
 	@Test
 	public void replaceMiddleWithMinus() {
-		assertEquals("lerod", testedClass.reverseWithFor("dorel"));
-		//assertEquals("", testedClass.reverseWithFor(null));
+		assertEquals("do-el", testedClass.reverseWithFor("dorel"));
+		assertEquals("family", testedClass.reverseWithFor("family"));
 	}
 	
 	// given a String, check if it is a inmatriculation format. returns boolean
