@@ -12,7 +12,7 @@ public class StringDrillsTest {
 	
 	@Test
 	public void testLengthOfString() {
-		assertEquals(testedClass.lengthOfString("mama"), 4);
+		assertEquals(4, testedClass.lengthOfString("mama"));
 	}
 	
 	@Test

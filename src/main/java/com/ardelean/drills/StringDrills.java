@@ -35,12 +35,12 @@ public class StringDrills {
 		if (null == string || string.length() == 0) {
 			return string;
 		}
-		return reverseRecursively(string.substring(1)) + string.charAt(0);  
-		
+		return reverseRecursively(string.substring(1)) + string.charAt(0);
+
 	}
 
 	public String lastThreeDigits(String mystr) {
-		if (mystr.length()<=3) {
+		if (mystr.length() <= 3) {
 			return mystr;
 		}
 		String result = mystr.substring(mystr.length() - 3);
@@ -60,11 +60,11 @@ public class StringDrills {
 		if (placa.length() != 7) {
 			return false;
 		}
-		if (!Character.isLetter(placa.charAt(0))
-				|| !Character.isLetter(placa.charAt(1))) {
+		if (!Character.isLetter(placa.charAt(0)) || !Character.isLetter(placa.charAt(1))) {
 			return false;
 		}
 
 		return true;
 	}
+
 }
