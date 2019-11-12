@@ -7,23 +7,44 @@
 package com.ardelean.drills;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
-
 
 public class ListDrills {
 
-    //~ ----------------------------------------------------------------------------------------------------------------
-    //~ Methods
-    //~ ----------------------------------------------------------------------------------------------------------------
+	// ~
+	// ----------------------------------------------------------------------------------------------------------------
+	// ~ Methods
+	// ~
+	// ----------------------------------------------------------------------------------------------------------------
 
-    // return a List with the elements which start with a certain letter from the original List
-    public List<String> elementsStartingWith(List<String> input, String letter) {
-        List<String> output = new ArrayList<String>();
-        for (String element : input) {
-            if (element.startsWith(letter)) {
-                output.add(element);
-            }
-        }
-        return output;
-    }
+	// return a List with the elements which start with a certain letter from the
+	// original List
+	public List<String> elementsStartingWith(List<String> input, String letter) {
+		List<String> output = new ArrayList<String>();
+		for (String element : input) {
+			if (element.startsWith(letter)) {
+				output.add(element);
+			}
+		}
+		return output;
+	}
+
+	public List<String> removeElements(List<String> input) {
+		Iterator<String> iterator = input.iterator();
+		while (iterator.hasNext()) {
+			if (iterator.next().length() < 3) {
+				iterator.remove();
+			}
+		}
+		return input;
+	}
+
+	public double averageDouble(List<Integer> list) {
+		int sum = 0;
+		for (int element : list) {
+			sum += element;
+		}
+		return  sum / (double) list.size();
+	}
 }
