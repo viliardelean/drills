@@ -1,8 +1,6 @@
 package com.ardelean.drills;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -15,7 +13,7 @@ public class ArraysDrillsTest {
 	public void testMaxValue() {
 		int[] input = { 3, 4, 7, 9, 13, 20, 2, 8 };
 		int[] input2 = { 5 };
-		assertEquals(20, testedClass.maxValue(input2));
+		assertEquals(20, testedClass.maxValue(input));
 	}
 
 	@Test
