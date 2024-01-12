@@ -25,7 +25,7 @@ public class Chars {
         }
         int maxCount = max;
         List<Character> result = charByCount.keySet().stream()
-                .filter(key -> charByCount.get(key) == maxCount).collect(Collectors.toList());
+                .filter(key -> charByCount.get(key) == maxCount).toList();
         System.out.println(result + " appears " + maxCount + " times");
     }
 
